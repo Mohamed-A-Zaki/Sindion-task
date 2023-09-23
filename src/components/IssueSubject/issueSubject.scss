@@ -1,0 +1,32 @@
+@use "../../sass/variables" as *;
+
+.issue-subject {
+  p {
+    color: $dark_gray;
+  }
+
+  .attachment {
+    .title {
+      font-weight: 500;
+
+      span {
+        color: $meduim_gray;
+      }
+    }
+
+    .item {
+      .file-name {
+        font-size: 12px;
+      }
+      .file-size {
+        font-size: 12px;
+        color: $meduim_gray;
+      }
+    }
+
+    .thumbnail {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

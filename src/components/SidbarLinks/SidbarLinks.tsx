@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Image } from "react-bootstrap";
 
 import home from "../../assets/Home.png";
-import profile from "../../assets/Profile.png";
+// import profile from "../../assets/Profile.png";
 import settings from "../../assets/Setting.png";
 
 export default function SidbarLinks() {
@@ -16,16 +16,22 @@ export default function SidbarLinks() {
     },
     {
       id: 2,
-      name: "Profile",
-      path: "/profile",
-      image: profile,
-    },
-    {
-      id: 3,
-      name: "Settings",
-      path: "/settings",
+      name: "All Tickets",
+      path: "/all-tickets",
       image: settings,
     },
+    // {
+    //   id: 2,
+    //   name: "Profile",
+    //   path: "/profile",
+    //   image: profile,
+    // },
+    // {
+    //   id: 3,
+    //   name: "Settings",
+    //   path: "/settings",
+    //   image: settings,
+    // },
   ];
 
   return (
