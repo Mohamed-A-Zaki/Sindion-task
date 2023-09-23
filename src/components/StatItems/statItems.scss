@@ -1,0 +1,34 @@
+@use "../../sass/variables" as *;
+
+.stat-links {
+  .item {
+    font-size: 12px;
+    font-weight: $regular_font;
+    cursor: pointer;
+
+    &.active-item {
+      background-color: rgba($primary_blue, 0.3) !important;
+    }
+  }
+  .color {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    &.solved {
+      background-color: $success;
+    }
+    &.pending {
+      background-color: $warning;
+    }
+    &.in-progress {
+      background-color: $in_progress;
+    }
+    &.canceled {
+      background-color: $error;
+    }
+    &.closed {
+      background-color: $meduim_gray;
+    }
+  }
+}

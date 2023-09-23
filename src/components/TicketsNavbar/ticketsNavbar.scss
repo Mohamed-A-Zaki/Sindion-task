@@ -1,0 +1,23 @@
+@use "../../sass/variables" as *;
+
+.tickets-nav-bar {
+  border-radius: 12px;
+
+  .navbar-brand {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .views {
+    color: $meduim_gray;
+    font-size: 12px;
+  }
+
+  img {
+    left: 20px;
+  }
+
+  input {
+    padding-left: 2rem;
+  }
+}

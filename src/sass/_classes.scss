@@ -1,0 +1,28 @@
+@use "./variables" as *;
+
+.sub_title_big {
+  font-size: 24px;
+  font-weight: $bold_font;
+}
+.sub_title_small {
+  font-size: 20px;
+  font-weight: $medium_font;
+}
+
+.body_big {
+  font-size: 20px;
+  font-weight: $regular_font;
+}
+.body_small {
+  font-size: 16px;
+  font-weight: $regular_font;
+}
+
+.small_text_1 {
+  font-size: 14px;
+  font-weight: $medium_font;
+}
+.small_text_2 {
+  font-size: 14px;
+  font-weight: $regular_font;
+}

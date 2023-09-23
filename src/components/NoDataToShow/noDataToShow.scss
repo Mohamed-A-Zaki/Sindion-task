@@ -1,0 +1,16 @@
+@use "../../sass/variables" as *;
+
+.no-data-to-show {
+  border-radius: 12px;
+  
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .desc {
+    color: $meduim_gray;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "tickets": [
+    {
+      "subject": "Subject 1",
+      "from": "Business",
+      "to": "IT",
+      "status": "open",
+      "description": "Description 1",
+      "id": 1
+    }
+  ],
+  "departments": [
+    {
+      "name": "HR",
+      "id": 1
+    },
+    {
+      "name": "IT",
+      "id": 2
+    },
+    {
+      "name": "Business",
+      "id": 3
+    }
+  ],
+  "status": [
+    {
+      "name": "Open",
+      "id": 1
+    },
+    {
+      "name": "InProgress",
+      "id": 2
+    },
+    {
+      "name": "Closed",
+      "id": 3
+    }
+  ]
+}

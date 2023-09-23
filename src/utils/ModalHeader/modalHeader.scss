@@ -1,0 +1,21 @@
+@use "../../sass/variables" as *;
+
+.modal-header {
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .sub-title {
+    font-size: 14px;
+    color: $dark_gray;
+  }
+
+  .create-ticket-icon {
+    img {
+      border: 10px solid rgba($primary_blue, 0.5);
+      outline: 8px solid rgba($primary_blue, 0.1);
+      border-radius: 50%;
+    }
+  }
+}

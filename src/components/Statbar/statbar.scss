@@ -1,0 +1,11 @@
+@use "../../sass/variables" as *;
+
+.stat-bar {
+  width: 200px;
+  border-radius: 12px;
+
+  select {
+    font-size: 12px;
+    font-weight: $regular_font;
+  }
+}

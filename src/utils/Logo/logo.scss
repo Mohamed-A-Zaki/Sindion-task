@@ -1,0 +1,12 @@
+@use "../../sass/variables" as *;
+
+.logo {
+  img {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  div {
+    width: 88px;
+    border-color: rgba($light_gray, 0.5) !important;
+  }
+}

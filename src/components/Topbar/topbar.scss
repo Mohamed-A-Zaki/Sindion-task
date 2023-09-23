@@ -1,0 +1,23 @@
+@use "../../sass/variables" as *;
+
+.top-bar {
+  .form-select {
+    font-size: 12px;
+    border: none;
+
+    &.lang {
+      color: $meduim_gray;
+    }
+
+    &.profile {
+      color: $black;
+      width: 100px;
+    }
+  }
+
+  .badge {
+    font-size: 8px;
+    transform: translate(-80%, -30%) !important;
+    background-color: $error !important;
+  }
+}
