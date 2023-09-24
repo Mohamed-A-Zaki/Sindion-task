@@ -1,19 +1,15 @@
 import "./IssueSubject.scss";
 import { Col, Image, Row } from "react-bootstrap";
 import attachment_image from "../../../assets/Rectangle 12464.png";
+import { useAppSelector } from "../../../store/hooks";
 
 export default function IssueSubject() {
+  const { ticket } = useAppSelector((state) => state.ticket);
+
   return (
     <div className="issue-subject p-4">
       <div className="title sub_title_small">Issue Subject</div>
-      <p className="my-3">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book not only fiv... It has
-        survived not only five centuries, but also the leap into electronic
-        typesetting, remaining essentially unchanged.
-      </p>
+      <p className="my-3">{ticket?.subject}</p>
 
       <div className="attachment">
         <div className="title">

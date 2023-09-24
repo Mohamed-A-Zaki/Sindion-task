@@ -5,8 +5,11 @@ import edit_icon from "../../../assets/Edit.png";
 import image from "../../../assets/Ellipse 100.png";
 import delete_icon from "../../../assets/Group.png";
 import Dot from "../../../utils/Dot/Dot";
+import { useAppSelector } from "../../../store/hooks";
 
 export default function IssueTitle() {
+  const { ticket } = useAppSelector((state) => state.ticket);
+
   return (
     <div className="issue-title d-flex align-items-center border-bottom p-4">
       <div className="flex-shrink-0">
@@ -17,7 +20,7 @@ export default function IssueTitle() {
         <div className="d-flex align-items-center">
           <span>27 Jon 2023</span>
           <Dot />
-          <span>From: Department</span>
+          <span>From: {ticket?.from}</span>
         </div>
       </div>
       <div className="d-flex gap-3">

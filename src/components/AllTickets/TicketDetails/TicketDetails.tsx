@@ -1,6 +1,9 @@
+import { useAppSelector } from "../../../store/hooks";
 import "./TicketDetails.scss";
 
 export default function TicketDetails() {
+  const { ticket } = useAppSelector((state) => state.ticket);
+
   return (
     <div className="ticket-details border p-4 mt-3">
       <div className="title mb-3">Details</div>
@@ -23,7 +26,7 @@ export default function TicketDetails() {
       </div>
       <div className="item d-flex flex-row my-2">
         <div className="key">Status</div>
-        <div className="value">Pending</div>
+        <div className="value">{ticket?.status}</div>
       </div>
       <div className="item d-flex flex-row my-2">
         <div className="key">Created time</div>

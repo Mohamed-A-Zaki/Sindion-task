@@ -4,9 +4,17 @@
       "subject": "Subject 1",
       "from": "Business",
       "to": "IT",
-      "status": "open",
+      "status": "pending",
       "description": "Description 1",
       "id": 1
+    },
+    {
+      "subject": "Subject 1",
+      "from": "Business",
+      "to": "IT",
+      "status": "canceled",
+      "description": "Description 1",
+      "id": 2
     }
   ],
   "departments": [

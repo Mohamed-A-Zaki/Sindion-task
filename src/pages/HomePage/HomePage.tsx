@@ -1,9 +1,8 @@
 import Statbar from "../../components/Home/Statbar";
-import NoDataToShow from "../../components/Home/NoDataToShow";
 import TicketsNavbar from "../../components/Home/TicketsNavbar";
-import TicketsTable from "../../components/Home/TicketsTable";
 import CreateNewTicketModal from "../../components/Home/CreateNewTicketModal";
 import CreateCompantTicketModal from "../../components/Home/CreateCompantTicketModal";
+import HomeContent from "../../components/Home/HomeContent/HomeContent";
 
 export default function HomePage() {
   return (
@@ -11,7 +10,7 @@ export default function HomePage() {
       <Statbar />
       <div className="flex-grow-1">
         <TicketsNavbar />
-        {[1].length ? <TicketsTable /> : <NoDataToShow />}
+        <HomeContent />
       </div>
       <CreateNewTicketModal />
       <CreateCompantTicketModal />

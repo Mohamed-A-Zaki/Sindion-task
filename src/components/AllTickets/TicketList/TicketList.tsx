@@ -1,7 +1,18 @@
 import Ticket from "../Ticket/Ticket";
+import useGetAllTickets from "../../../hooks/useGetAllTickets";
 
 export default function TicketList() {
-  return [...new Array(10)].map((_, indx) => {
-    return <Ticket key={indx} indx={indx} />;
+  const { data, isError, isLoading } = useGetAllTickets();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error...</div>;
+  }
+
+  return data?.data.map((ticket) => {
+    return <Ticket {...ticket} key={ticket.id} />;
   });
 }

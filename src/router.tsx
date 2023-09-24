@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/all-tickets",
+    path: "/all-tickets/:id",
     element: <AllTicketsPage />,
   },
 ]);

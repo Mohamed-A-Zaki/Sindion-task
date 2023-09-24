@@ -16,7 +16,7 @@ export default function SidbarLinks() {
     {
       id: 2,
       name: "All Tickets",
-      path: "/all-tickets",
+      path: "/all-tickets/1",
       image: settings,
     },
     // {

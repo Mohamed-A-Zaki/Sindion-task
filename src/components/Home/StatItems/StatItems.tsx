@@ -1,59 +1,39 @@
 import "./StatItems.scss";
 import stroke from "../../../assets/Stroke-3.png";
 import { Image, ListGroup } from "react-bootstrap";
+import useGetAllStats from "../../../hooks/useGetAllStats";
 
 export default function StatItems() {
-  const items = [
-    {
-      id: 1,
-      text: "All Tickets",
-      color: "",
-      count: 0,
-    },
-    {
-      id: 2,
-      text: "Solved",
-      color: "solved",
-      count: 0,
-    },
-    {
-      id: 3,
-      text: "Pending",
-      color: "pending",
-      count: 0,
-    },
-    {
-      id: 4,
-      text: "In progress",
-      color: "in-progress",
-      count: 0,
-    },
-    {
-      id: 5,
-      text: "Canceled",
-      color: "canceled",
-      count: 0,
-    },
-    {
-      id: 6,
-      text: "Closed",
-      color: "closed",
-      count: 0,
-    },
-  ];
+  const { data, isError, isLoading } = useGetAllStats();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error...</div>;
+  }
 
   return (
     <ListGroup className="stat-links">
-      {items.map(({ id, color, text, count }) => (
+      <ListGroup.Item className="border-0 bg-transparent border-top">
+        <div
+          className={`item d-flex align-items-center gap-2 p-2 rounded-2 active-item`}
+        >
+          <div className={`color`}></div>
+          <div className="text flex-grow-1">
+            All Tickets <span>({0})</span>
+          </div>
+          <Image src={stroke} />
+        </div>
+      </ListGroup.Item>
+
+      {data?.data.map(({ id, name }) => (
         <ListGroup.Item key={id} className="border-0 bg-transparent border-top">
-          <div
-            className={`item d-flex align-items-center gap-2 p-2 rounded-2${
-              id === 1 && " active-item"
-            }`}
-          >
-            <div className={`color ${color}`}></div>
+          <div className={`item d-flex align-items-center gap-2 p-2 rounded-2`}>
+            <div className={`color ${name}`}></div>
             <div className="text flex-grow-1">
-              {text} <span>({count})</span>
+              {name} <span>({0})</span>
             </div>
             <Image src={stroke} />
           </div>
