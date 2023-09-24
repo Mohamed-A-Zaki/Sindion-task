@@ -14,45 +14,4 @@
       color: $black;
     }
   }
-
-  &.solved {
-    border-left: 4px solid $success;
-
-    button {
-      color: $success;
-      background-color: rgba($success, 0.3);
-    }
-  }
-  &.pending {
-    border-left: 4px solid $warning;
-
-    button {
-      color: $warning;
-      background-color: rgba($warning, 0.3);
-    }
-  }
-  &.in-progress {
-    border-left: 4px solid $in_progress;
-
-    button {
-      color: $in_progress;
-      background-color: rgba($in_progress, 0.3);
-    }
-  }
-  &.canceled {
-    border-left: 4px solid $error;
-
-    button {
-      color: $error;
-      background-color: rgba($error, 0.3);
-    }
-  }
-  &.closed {
-    border-left: 4px solid $error;
-
-    button {
-      color: $meduim_gray;
-      background-color: rgba($meduim_gray, 0.3);
-    }
-  }
 }
