@@ -1,6 +1,6 @@
 import "./App.scss";
-import Sidebar from "./components/Sidebar/Sidebar";
-import Topbar from "./components/Topbar/Topbar";
+import Sidebar from "./components/Home/Sidebar/Sidebar";
+import Topbar from "./components/Home/Topbar/Topbar";
 import { Outlet } from "react-router-dom";
 
 export default function App() {

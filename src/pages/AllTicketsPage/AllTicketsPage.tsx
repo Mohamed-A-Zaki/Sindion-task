@@ -1,6 +1,6 @@
-import DetailsNavbar from "../../components/DetailsNavbar/DetailsNavbar";
-import AllTicketsSidebar from "../../components/AllTicketsSidebar/AllTicketsSidebar";
-import TicketDetailsLayout from "../../components/TicketDetailsLayout/TicketDetailsLayout";
+import DetailsNavbar from "../../components/AllTickets/DetailsNavbar/DetailsNavbar";
+import AllTicketsSidebar from "../../components/AllTickets/AllTicketsSidebar/AllTicketsSidebar";
+import TicketDetailsLayout from "../../components/AllTickets/TicketDetailsLayout/TicketDetailsLayout";
 
 export default function AllTicketsPage() {
   return (

@@ -1,0 +1,21 @@
+@use "../../../sass/variables" as *;
+
+.chart-sec {
+  .apexcharts-legend {
+    display: none !important;
+  }
+
+  .apexcharts-datalabels {
+    display: none !important;
+  }
+
+  .caption {
+    font-size: 12px;
+    color: $black;
+  }
+
+  .total {
+    font-size: 12px;
+    color: $meduim_gray;
+  }
+}

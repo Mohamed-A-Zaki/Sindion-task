@@ -1,0 +1,47 @@
+@use "../../../sass/variables" as *;
+
+.create_new_ticket_modal {
+  .item {
+    cursor: pointer;
+    border: 3px solid transparent;
+
+    &.active {
+      border: 3px solid $primary_blue;
+    }
+
+    .title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .desc {
+      font-size: 14px;
+      color: $dark_gray;
+    }
+
+    &.create-company-ticket {
+      img {
+        border: 10px solid rgba(#1b6792, 0.25);
+        outline: 8px solid rgba(#1b6792, 0.09);
+        border-radius: 50%;
+      }
+    }
+
+    &.create-support-ticket {
+      img {
+        border: 10px solid rgba(#f4ebff, 1);
+        outline: 8px solid rgba(#f4ebff, 0.5);
+        border-radius: 50%;
+      }
+    }
+
+    .form-check-input {
+      border-color: $black;
+
+      &:checked {
+        background-color: $primary_blue;
+        border-color: $primary_blue;
+      }
+    }
+  }
+}

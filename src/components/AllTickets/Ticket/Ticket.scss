@@ -1,0 +1,17 @@
+@use "../../../sass/variables" as *;
+
+.ticket {
+  &.active {
+    background-color: rgba($primary_blue, 0.05);
+  }
+
+  .ticket-info {
+    font-size: 12px;
+    color: $dark_gray;
+
+    .user-name {
+      font-size: 14px;
+      color: $black;
+    }
+  }
+}

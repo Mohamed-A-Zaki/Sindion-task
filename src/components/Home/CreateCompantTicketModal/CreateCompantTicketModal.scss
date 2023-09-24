@@ -1,0 +1,13 @@
+@use "../../../sass/variables" as *;
+
+.create_company_ticket_modal {
+  .form-label {
+    font-size: 14px;
+    color: rgba($dark_gray, 0.7);
+  }
+
+  .form-control::placeholder,
+  select {
+    color: #667085;
+  }
+}

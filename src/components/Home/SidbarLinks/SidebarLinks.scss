@@ -1,0 +1,13 @@
+@use "../../../sass/variables" as *;
+
+.nav-links {
+  margin-left: 18px;
+  margin-top: 48px;
+  
+  a.active {
+    background-color: $light_gray;
+    color: $primary_blue !important;
+    border-radius: 40px 0 0 40px;
+    position: relative;
+  }
+}

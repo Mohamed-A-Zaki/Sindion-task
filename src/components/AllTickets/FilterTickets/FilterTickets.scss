@@ -1,0 +1,13 @@
+@use "../../../sass/variables" as *;
+
+.filter-tickets {
+  .form-select {
+    font-weight: 500;
+  }
+
+  .arrow {
+    width: 24px;
+    height: 24px;
+    background-color: $light_gray;
+  }
+}
