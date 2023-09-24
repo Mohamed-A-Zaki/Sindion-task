@@ -5,18 +5,4 @@
   height: calc(100vh - 66px);
   max-height: calc(100vh - 66px);
   cursor: pointer;
-
-  &::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: $primary_blue;
-    border-radius: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-    border-radius: 4px;
-  }
 }

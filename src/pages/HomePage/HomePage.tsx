@@ -11,7 +11,7 @@ export default function HomePage() {
       <Statbar />
       <div className="flex-grow-1">
         <TicketsNavbar />
-        {[].length ? <TicketsTable /> : <NoDataToShow />}
+        {[1].length ? <TicketsTable /> : <NoDataToShow />}
       </div>
       <CreateNewTicketModal />
       <CreateCompantTicketModal />

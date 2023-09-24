@@ -2,6 +2,11 @@
 
 .teckets-table {
   border-radius: 12px;
+  max-height: 75vh;
+
+  table {
+    min-width: 600px;
+  }
 
   tr {
     span,
