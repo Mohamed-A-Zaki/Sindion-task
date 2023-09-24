@@ -1,32 +1,17 @@
-import { useState } from "react";
 import "./CreateNewTicketModal.scss";
+import { Form, Image, Modal } from "react-bootstrap";
 
 import MainButton from "../../../utils/MainButton";
 import ModalHeader from "../../../utils/ModalHeader";
 import CancelButton from "../../../utils/CancelButton";
 
-import { Form, Image, Modal } from "react-bootstrap";
-import { useAppDispatch, useAppSelector } from "../../../store/hooks";
-import { close_create_new_ticket_modal } from "../../../store/createNewTicketModalSlice";
-import { open_create_company_ticket_modal } from "../../../store/createCompanyTicketModalSlice";
-
 import create_company from "../../../assets/layers-two-01.png";
 import create_support from "../../../assets/layers-three-01.png";
+import useCreateNewTicketModal from "../../../hooks/useCreateNewTicketModal";
 
 export default function CreateNewTicketModal() {
-  const [ticket, setTicket] = useState<"company" | "support">("company");
-
-  const dispatch = useAppDispatch();
-  const { show } = useAppSelector((state) => state.createNewTicketModal);
-
-  const handleClose = () => {
-    dispatch(close_create_new_ticket_modal());
-  };
-
-  const handleCreateTicket = () => {
-    handleClose();
-    dispatch(open_create_company_ticket_modal());
-  };
+  const { show, handleClose, ticket, setTicket, handleCreateTicket } =
+    useCreateNewTicketModal();
 
   return (
     <Modal className="create_new_ticket_modal" show={show} onHide={handleClose}>
@@ -59,7 +44,7 @@ export default function CreateNewTicketModal() {
               type={"radio"}
               name="ticket"
               value="company"
-              checked={ticket === "company"}
+              defaultChecked={ticket === "company"}
             />
           </div>
         </div>
@@ -86,7 +71,7 @@ export default function CreateNewTicketModal() {
               type={"radio"}
               name="ticket"
               value="support"
-              checked={ticket === "support"}
+              defaultChecked={ticket === "support"}
             />
           </div>
         </div>

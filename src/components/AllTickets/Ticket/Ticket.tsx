@@ -3,7 +3,7 @@ import { Button, Image } from "react-bootstrap";
 import status_img from "../../../assets/company_name.png";
 import Dot from "../../../utils/Dot/Dot";
 import { TicketType } from "../../../types/tickets";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function Ticket({ id, from, to, status }: TicketType) {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export default function Ticket({ id, from, to, status }: TicketType) {
   return (
     <div
       className={`ticket ${status} d-flex justify-content-between p-3 border-start border-4${
-        id === 0 && " active"
+        id === Number(useParams().id) && " active"
       }`}
       onClick={handleClick}
     >

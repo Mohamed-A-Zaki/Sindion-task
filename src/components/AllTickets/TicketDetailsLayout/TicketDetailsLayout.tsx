@@ -7,15 +7,12 @@ import useGetOneTicket from "../../../hooks/useGetOneTicket";
 import { useAppDispatch } from "../../../store/hooks";
 import { setTicket } from "../../../store/ticketSlice";
 import { TicketType } from "../../../types/tickets";
+import { useParams } from "react-router-dom";
 
-type TicketDetailsLayoutProps = {
-  id: number;
-};
-
-export default function TicketDetailsLayout({ id }: TicketDetailsLayoutProps) {
-  const { isLoading, isError, data } = useGetOneTicket(Number(id));
-
+export default function TicketDetailsLayout() {
+  const { id } = useParams();
   const dispatch = useAppDispatch();
+  const { isLoading, isError, data } = useGetOneTicket(Number(id));
 
   useEffect(() => {
     dispatch(setTicket(data?.data as TicketType));
