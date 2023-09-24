@@ -34,31 +34,19 @@ h3 {
   border-radius: 4px;
 }
 
-.solved {
-  button {
-    color: $success !important;
-    background-color: rgba($success, 0.3) !important;
-  }
-}
-.pending {
-  button {
-    color: $warning !important;
-    background-color: rgba($warning, 0.3) !important;
-  }
-}
-.in-progress {
+.InProgress {
   button {
     color: $in_progress !important;
     background-color: rgba($in_progress, 0.3) !important;
   }
 }
-.canceled {
+.Open {
   button {
-    color: $error !important;
-    background-color: rgba($error, 0.3) !important;
+    color: $success !important;
+    background-color: rgba($success, 0.3) !important;
   }
 }
-.closed {
+.Closed {
   button {
     color: $meduim_gray !important;
     background-color: rgba($meduim_gray, 0.3) !important;

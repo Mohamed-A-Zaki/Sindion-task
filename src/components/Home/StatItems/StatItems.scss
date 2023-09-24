@@ -15,20 +15,14 @@
     height: 8px;
     border-radius: 50%;
 
-    &.solved {
+    &.Open {
       background-color: $success;
     }
-    &.pending {
-      background-color: $warning;
-    }
-    &.in-progress {
-      background-color: $in_progress;
-    }
-    &.canceled {
-      background-color: $error;
-    }
-    &.closed {
+    &.Closed {
       background-color: $meduim_gray;
+    }
+    &.InProgress {
+      background-color: $in_progress;
     }
   }
 }

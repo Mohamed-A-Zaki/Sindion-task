@@ -4,7 +4,7 @@
       "subject": "Subject 1",
       "from": "Business",
       "to": "IT",
-      "status": "pending",
+      "status": "Open",
       "description": "Description 1",
       "id": 1
     },
@@ -12,9 +12,17 @@
       "subject": "Subject 1",
       "from": "Business",
       "to": "IT",
-      "status": "canceled",
+      "status": "Closed",
       "description": "Description 1",
       "id": 2
+    },
+    {
+      "subject": "Subject 1",
+      "from": "Business",
+      "to": "IT",
+      "status": "InProgress",
+      "description": "Description 1",
+      "id": 3
     }
   ],
   "departments": [

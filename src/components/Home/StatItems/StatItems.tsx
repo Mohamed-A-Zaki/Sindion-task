@@ -2,8 +2,11 @@ import "./StatItems.scss";
 import stroke from "../../../assets/Stroke-3.png";
 import { Image, ListGroup } from "react-bootstrap";
 import useGetAllStats from "../../../hooks/useGetAllStats";
+import { useAppSelector } from "../../../store/hooks";
 
 export default function StatItems() {
+  const { tickets_list } = useAppSelector((state) => state.ticket);
+
   const { data, isError, isLoading } = useGetAllStats();
 
   if (isLoading) {
@@ -22,7 +25,7 @@ export default function StatItems() {
         >
           <div className={`color`}></div>
           <div className="text flex-grow-1">
-            All Tickets <span>({0})</span>
+            All Tickets <span>({tickets_list?.length})</span>
           </div>
           <Image src={stroke} />
         </div>
